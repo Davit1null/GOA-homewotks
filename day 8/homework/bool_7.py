@@ -1,0 +1,7 @@
+first_num = int(input("please enter first number;"))
+second_num = int(input("please enter second number;"))
+third_num = int(input("please enter third number;"))
+fourth_num = int(input("please enter fourth number;"))
+last_num = int(input("please enter fifth number;"))
+result = (first_num * last_num) < (first_num + second_num + third_num + fourth_num + last_num)
+print(result)
