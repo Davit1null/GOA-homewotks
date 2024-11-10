@@ -1,0 +1,1 @@
+#front-endi back-endi da full-staki aris saitis wyoba da is aris dayopiuli sam nawilad front-endi da back-endi aris saitis visualuri da kodebit dawerili samushao romelic jamshi full-staki aketebs
