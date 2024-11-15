@@ -1,0 +1,5 @@
+age_1 = int(input("please enter first person's age:"))
+age_2 = int(input("please enter second person's age:"))
+age_3 = int(input("please enter third person's age:"))
+all = (age_1 + age_2 + age_3)
+print(all / 3)

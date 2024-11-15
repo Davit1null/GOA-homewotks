@@ -1,0 +1,7 @@
+num_1 = int(input("enter your first number:"))
+num_2 = int(input("enter your second number:"))
+num_3 = int(input("enter your third number:"))
+print(num_1 + num_2 + num_3)
+print(num_1 - num_2 - num_3)
+print(num_1 * num_2 * num_3)
+print(num_1 / num_2 / num_3)
