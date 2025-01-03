@@ -1,0 +1,1 @@
+#onclick atrebuti aris atrebuti romelic daklikebis shemdeg ragacas an raime texsts cvlis

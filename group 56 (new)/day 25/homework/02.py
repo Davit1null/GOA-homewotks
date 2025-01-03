@@ -1,0 +1,1 @@
+#alert atributi aris gamaprtxilebeli atrebuti rasac gamoaqvs gamaprtxilebeli nishani an mesigi
