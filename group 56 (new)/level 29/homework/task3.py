@@ -1,0 +1,1 @@
+#rgb is ganmarteba aris red green blue rac nishnavs sam pers da am samiperis sashvalebit chven shegvidzlia nebismieri peris warmoqmna
