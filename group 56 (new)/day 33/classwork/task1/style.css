@@ -1,0 +1,21 @@
+#p1 {
+    text-align: left; text-decoration: underline;
+}
+#p2 {
+    text-align: center; text-decoration: line-through;
+}
+#p3 {
+    text-align: left;
+}
+#p4 {
+    text-align: center; text-decoration: underline;
+}
+#p5 {
+    text-align: right; text-decoration: overline;
+}
+#p6 {
+    text-align: center; 
+}
+#p7 {
+    text-align: left; text-decoration: double;
+}
