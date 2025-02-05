@@ -1,0 +1,23 @@
+a:hover {
+    color: aqua;
+    cursor: pointer;
+}
+a:active {
+    size: 400px;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+   text-decoration: underline ;
+}
+a{
+    font-weight: bold;
+}
+a:visited{
+    font-style: italic;
+}
+a:visited{
+    text-transform: uppercase;
+}
+  
