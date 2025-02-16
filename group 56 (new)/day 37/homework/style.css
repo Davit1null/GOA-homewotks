@@ -1,0 +1,12 @@
+#h3 {
+    list-style-type: georgian;
+}
+#h1 {
+    font-family: bold;
+}
+#h2 {
+    font-family: bold; 
+}
+li {
+    list-style-image: url("https://www.google.com/imgres?q=laugh&imgurl=https%3A%2F%2Fi0.wp.com%2Fpost.medicalnewstoday.com%2Fwp-content%2Fuploads%2Fsites%2F3%2F2022%2F01%2Finappropriate_laughter_GettyImages1134729066_Header-1-1024x575.jpg%3Fw%3D1155%26h%3D1528&imgrefurl=https%3A%2F%2Fwww.medicalnewstoday.com%2Farticles%2Finappropriate-laughter&docid=t80h79AJ19-Q9M&tbnid=OCUZc3VXSiofKM&vet=12ahUKEwjVy-aV-8eLAxXwVPEDHWI-KaEQM3oECG4QAA..i&w=1024&h=575&hcb=2&ved=2ahUKEwjVy-aV-8eLAxXwVPEDHWI-KaEQM3oECG4QAA");
+}
