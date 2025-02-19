@@ -1,0 +1,5 @@
+again = (1, 2, 3, 3, 6, 1, 8, 4, 5, 2, 6)
+count_2 = again.count(2)
+index_3 = again.index(3)
+print(count_2)
+print(index_3)
