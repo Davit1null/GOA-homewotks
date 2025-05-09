@@ -1,0 +1,20 @@
+#one {
+    flex: auto;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 100px;
+    flex-wrap: wrap;
+}
+#two {
+    color: aquamarine;
+    text-align: center;
+    flex-grow: 100px;
+    flex-wrap: wrap;
+}
+#three {
+    text-align: center;
+    flex-grow: 100px;
+    flex-direction: row-reverse;
+    -ms-flex-align: end;
+    flex-wrap: wrap;
+}
