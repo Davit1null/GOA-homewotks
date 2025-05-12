@@ -1,0 +1,58 @@
+p:hover {
+    background-color: blue;
+    width: 50px;
+}
+@keyframes name-for-animations {
+    20% {
+        background-color: antiquewhite;
+    }
+    40% {
+        background-color: blanchedalmond;
+    }
+    60% {
+        background-color: lightgreen;
+    }
+    80% {
+        background-color: aquamarine;
+    }
+    100% {
+        background-color: aqua;
+    }
+}
+h1:hover {
+    animation-name: name-for-animations;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+@keyframes animation-for-button {
+    20% {
+        background-color: antiquewhite;
+        height: 20px;
+        width: 20px;
+    }
+    40% {
+        background-color: blanchedalmond;
+        height: 40px;
+        width: 40px;
+    }
+    60% {
+        background-color: lightgreen;
+        height: 60px;
+        width: 60px;
+    }
+    80% {
+        background-color: aquamarine;
+        height: 80px;
+        width: 80px;
+    }
+    100% {
+        background-color: aqua;
+        height: 100px;
+        width: 100px;
+    }
+}
+button:active {
+    animation-name: animation-for-button;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
