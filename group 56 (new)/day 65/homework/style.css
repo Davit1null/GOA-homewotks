@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body style */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+/* header style */
+header {
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+/* navbar style */
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+/* navbar li style */
+.navbar li {
+  position: relative;
+  margin: 10px 20px;
+}
+/* navbar a style */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+/* navbar a:hover style */
+.navbar a:hover {
+  color: #ff4141;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #222;
+  border: 1px solid #444;
+  padding: 10px 0;
+    z-index: 10;}
+/* dropdown-menu li  */
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+/*  dropdown-menu a */
+.dropdown-menu a {
+  display: block;
+  padding: 8px 20px;
+  color: white;
+  text-align: left;
+}
+/* dropdown-menu a:hover */
+.dropdown-menu a:hover {
+  background-color: #333;
+  color: #ff4141;
+}
+
+.show {
+  display: block;
+}
+/* theme-toggle  style */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 8px 16px;
+  border: none;
+  background: #444;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+/* theme-toggle:hover style */
+#theme-toggle:hover {
+  background: #666;
+}
+
+main {
+  padding: 0 20px;
+}
+
+section {
+  background: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.hover-section:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+h2 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-img {
+  width: 150px;
+  display: block;
+  margin: 10px auto 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  margin-top: 40px;
+}
+
+/* ღამის რეჟიმი */
+body.night-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.night-mode header,
+body.night-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.night-mode .navbar {
+  background-color: #333;
+}
+
+body.night-mode .navbar a:hover {
+  color: #ff4141;
+}
+
+body.night-mode section {
+  background: #1f1f1f;
+  box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+/* მობილური */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+
+  .section-img {
+    width: 120px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  #theme-toggle {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+#aboutpage {
+    background-color: #ffffff00;
+}
