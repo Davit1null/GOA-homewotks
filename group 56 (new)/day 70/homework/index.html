@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Events</title>
+  <style>
+    #myDiv {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="myParagraph">Original text</p>
+  <button onclick="changeText()">Change Text</button>
+
+  <div id="myDiv">This is a div</div>
+  <button onclick="changeBackground()">Change Background Color</button>
+
+  <h1 id="myHeading">Heading</h1>
+  <button onclick="changeFontSize()">Change Font Size</button>
+
+  <div id="hideDiv">I will disappear</div>
+  <button onclick="hideDiv()">Hide Div</button>
+
+  <button onclick="showAlert()">Show Alert</button>
+
+  <script>
+    // 7
+    function changeText() {
+      document.getElementById("myParagraph").textContent = "Text has been changed!";
+    }
+
+    // 8
+    function changeBackground() {
+      document.getElementById("myDiv").style.backgroundColor = "lightblue";
+    }
+
+    // 9
+    function changeFontSize() {
+      document.getElementById("myHeading").style.fontSize = "36px";
+    }
+
+    // 10
+    function hideDiv() {
+      document.getElementById("hideDiv").style.display = "none";
+    }
+
+    // 11
+    function showAlert() {
+      alert("This is a custom alert message!");
+    }
+  </script>
+
+</body>
+</html>

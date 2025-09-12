@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listeners Example</title>
+  <style>
+    #colorBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      margin-bottom: 10px;
+    }
+
+    #imageToggle {
+      width: 150px;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="alertBtn">Click Me</button><br><br>
+
+  <p id="hoverText">Hover over me!</p><br>
+
+  <div id="colorBox"></div><br>
+
+  <input type="text" id="textInput" value="Click me and check the console"><br><br>
+
+  <button id="toggleImageBtn">Show/Hide Image</button><br>
+  <img id="imageToggle" src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+  <script>
+    // 2
+    document.getElementById("alertBtn").addEventListener("click", function() {
+      alert("Button was clicked!");
+    });
+
+    // 3
+    const hoverPara = document.getElementById("hoverText");
+    hoverPara.addEventListener("mouseover", function() {
+      hoverPara.textContent = "You hovered over me!";
+    });
+
+    hoverPara.addEventListener("mouseout", function() {
+      hoverPara.textContent = "Hover over me!";
+    });
+
+    // 4
+    const box = document.getElementById("colorBox");
+    let isBlue = false;
+    box.addEventListener("click", function() {
+      if (isBlue) {
+        box.style.backgroundColor = "lightgray";
+      } else {
+        box.style.backgroundColor = "lightblue";
+      }
+      isBlue = !isBlue;
+    });
+
+    // 5
+    document.getElementById("textInput").addEventListener("click", function() {
+      console.log("Input value:", this.value);
+    });
+
+    // 6
+    const toggleBtn = document.getElementById("toggleImageBtn");
+    const image = document.getElementById("imageToggle");
+
+    toggleBtn.addEventListener("click", function() {
+      if (image.style.display === "none") {
+        image.style.display = "block";
+      } else {
+        image.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
