@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM Homework</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .circle { 
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+      background: purple; 
+      position: relative; 
+      margin: 5px;
+    }
+    .homework-box {
+      margin-bottom: 40px;
+      padding: 10px;
+      border: 1px dashed gray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="homework-box">
+    <h1>This is an H1</h1>
+    <h3>This is an H3</h3>
+    <h1>Another H1</h1>
+    <h3>Another H3</h3>
+  </div>
+
+  <div class="homework-box">
+    <p>This is a paragraph with several words in it to count.</p>
+    <p>Short one.</p>
+    <p>Another paragraph to test the counter functionality.</p>
+  </div>
+
+  <div class="homework-box">
+    <img src="https://via.placeholder.com/300" alt="cat playing" />
+    <img src="https://via.placeholder.com/300" alt="dog running" />
+    <img src="https://via.placeholder.com/300" alt="sleepy cat" />
+  </div>
+
+  <div class="homework-box" id="circle-container"></div>
+
+  <div class="homework-box">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+  </div>
+
+  <div class="homework-box" id="box-button-area"></div>
+
+  <div class="homework-box">
+    <input type="text" placeholder="Type something..." />
+    <input type="text" placeholder="Another input..." />
+  </div>
+
+  <div class="homework-box" id="message-list-area"></div>
+
+  <div class="homework-box" id="hide-reveal-area"></div>
+
+  <div class="homework-box">
+    <button onclick="countTags()">Count Elements</button>
+  </div>
+
+  <script>
+    // 1
+    document.querySelectorAll('h1').forEach(h => {
+      h.style.color = 'green';
+      h.style.border = '1px solid black';
+      h.style.fontSize = '30px';
+    });
+    document.querySelectorAll('h3').forEach(h => {
+      h.style.color = 'green';
+      h.style.border = '1px solid black';
+      h.style.fontSize = '24px';
+    });
+
+    // 2
+    document.querySelectorAll('p').forEach((p, i) => {
+      const wordCount = p.textContent.trim().split(/\s+/).length;
+      console.log(`Paragraph ${i + 1} has ${wordCount} words`);
+    });
+
+    // 3
+    document.querySelectorAll('img').forEach(img => {
+      img.style.width = '200px';
+      img.style.borderRadius = '10px';
+      if (img.alt.toLowerCase().includes('cat')) {
+        img.style.border = '3px solid orange';
+      } else {
+        img.style.border = '3px solid gray';
+      }
+    });
+
+    // 4
+    const circleContainer = document.getElementById('circle-container');
+    for (let i = 0; i < 3; i++) {
+      const circle = document.createElement('div');
+      circle.className = 'circle';
+      circle.style.left = '0px';
+      circleContainer.appendChild(circle);
+
+      let pos = 0;
+      setInterval(() => {
+        pos += 10;
+        circle.style.left = pos + 'px';
+      }, 200);
+    }
+
+    // 5
+    document.querySelectorAll('li').forEach((li, i) => {
+      li.style.backgroundColor = i % 2 === 0 ? 'skyblue' : 'lightgray';
+    });
+
+    // 6
+    const boxButtonArea = document.getElementById('box-button-area');
+    const moveBox = document.createElement('div');
+    moveBox.style.width = '100px';
+    moveBox.style.height = '100px';
+    moveBox.style.background = 'red';
+    moveBox.style.position = 'relative';
+    moveBox.style.left = '0px';
+    boxButtonArea.appendChild(moveBox);
+
+    const moveBtn = document.createElement('button');
+    moveBtn.textContent = 'Move Box';
+    boxButtonArea.appendChild(moveBtn);
+
+    moveBtn.onclick = () => {
+      const currentLeft = parseInt(moveBox.style.left) || 0;
+      moveBox.style.left = currentLeft + 20 + 'px';
+      moveBox.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    };
+
+    // 7
+    document.querySelectorAll('input[type="text"]').forEach(input => {
+      input.addEventListener('input', () => {
+        input.style.backgroundColor = input.value.length > 20 ? 'red' : 'white';
+      });
+    });
+
+    // 8
+    const messageArea = document.getElementById('message-list-area');
+    const ul = document.createElement('ul');
+    messageArea.appendChild(ul);
+
+    let msgCount = 0;
+    const messageInterval = setInterval(() => {
+      if (msgCount >= 10) {
+        clearInterval(messageInterval);
+        return;
+      }
+      msgCount++;
+      const li = document.createElement('li');
+      li.textContent = `Message ${msgCount}`;
+      ul.appendChild(li);
+    }, 2000);
+
+    // 9
+    const hideRevealArea = document.getElementById('hide-reveal-area');
+    const hideBox = document.createElement('div');
+    hideBox.textContent = "I will disappear...";
+    hideBox.style.width = '200px';
+    hideBox.style.height = '50px';
+    hideBox.style.background = 'green';
+    hideBox.style.color = 'white';
+    hideBox.style.display = 'flex';
+    hideBox.style.alignItems = 'center';
+    hideBox.style.justifyContent = 'center';
+    hideBox.style.marginBottom = '10px';
+
+    const toggleBtn = document.createElement('button');
+    toggleBtn.textContent = 'Hide Me for 5s';
+
+    hideRevealArea.appendChild(hideBox);
+    hideRevealArea.appendChild(toggleBtn);
+
+    toggleBtn.onclick = () => {
+      hideBox.style.display = 'none';
+      setTimeout(() => {
+        hideBox.style.display = 'flex';
+      }, 5000);
+    };
+
+    // 10
+    function countTags() {
+      const tag = prompt('Enter a tag name (e.g., div, p, img)').toLowerCase();
+      const count = document.getElementsByTagName(tag).length;
+      alert(`There are ${count} <${tag}> elements on this page.`);
+    }
+  </script>
+</body>
+</html>
